@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Theme.AppTheme">
+        <attr name="textAppearanceBody1" format="reference" />
+        <attr name="textAppearanceBody2" format="reference" />
+        <attr name="textAppearanceBody3" format="reference" />
+
+        <attr name="colorBackground" format="reference" />
+        <attr name="colorElevation" format="reference" />
+        <attr name="colorBrandColor" format="reference" />
+        <attr name="colorLabel" format="reference" />
+        <attr name="colorSecondaryElevation" format="reference" />
+    </declare-styleable>
+</resources>

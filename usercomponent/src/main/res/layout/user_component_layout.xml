@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:theme="@style/AppTheme"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <!--region avatar-->
+
+    <FrameLayout
+        android:id="@+id/userAvatarFrameLayout"
+        android:layout_width="104dp"
+        android:layout_height="104dp"
+        android:layout_marginStart="@dimen/spacing_m"
+        android:foreground="@drawable/shape_circle_color_elevation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/userAvatarImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/avatar_placeholder_light"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/avatar_placeholder_light" />
+
+    </FrameLayout>
+
+    <!--endregion avatar-->
+
+    <!--region labels-->
+
+    <TextView
+        android:id="@+id/userNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_m"
+        android:layout_marginEnd="@dimen/spacing_m"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:maxLines="1"
+        android:textAppearance="?attr/textAppearanceBody1"
+        android:textColor="?attr/colorElevation"
+        app:layout_constraintBottom_toTopOf="@+id/userLocationLiveFrameLayout"
+        app:layout_constraintEnd_toStartOf="@+id/userFollowChip"
+        app:layout_constraintStart_toEndOf="@+id/userAvatarFrameLayout"
+        app:layout_constraintTop_toTopOf="@+id/userAvatarFrameLayout"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Artist Name" />
+
+    <TextView
+        android:id="@+id/userFollowersTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_xxxs"
+        android:layout_marginEnd="@dimen/spacing_m"
+        android:drawablePadding="@dimen/spacing_xxs"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:maxLines="1"
+        android:textAppearance="?attr/textAppearanceBody3"
+        android:textColor="?attr/colorLabel"
+        app:drawableStartCompat="@drawable/ic_followers_16"
+        app:layout_constraintBottom_toBottomOf="@+id/userAvatarFrameLayout"
+        app:layout_constraintEnd_toStartOf="@+id/userFollowChip"
+        app:layout_constraintStart_toStartOf="@+id/userNameTextView"
+        app:layout_constraintTop_toBottomOf="@+id/userLocationLiveFrameLayout"
+        tools:text="245 Followers" />
+
+    <!--region location live-->
+
+    <FrameLayout
+        android:id="@+id/userLocationLiveFrameLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_xxxs"
+        app:layout_constraintBottom_toTopOf="@+id/userFollowersTextView"
+        app:layout_constraintEnd_toStartOf="@+id/userFollowChip"
+        app:layout_constraintStart_toEndOf="@+id/userAvatarFrameLayout"
+        app:layout_constraintTop_toBottomOf="@+id/userNameTextView">
+
+        <LinearLayout
+            android:id="@+id/userLocationLiveLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_m"
+            android:layout_marginEnd="@dimen/spacing_m"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:id="@+id/userLocationTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/spacing_xxs"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?attr/colorLabel"
+                tools:text="Location" />
+
+            <!--region live-->
+
+            <LinearLayout
+                android:id="@+id/userLiveLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_rectangle_color_brand"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/spacing_xxs"
+                android:paddingEnd="@dimen/spacing_xxs">
+
+                <ImageView
+                    android:id="@+id/userLiveIconImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingTop="@dimen/spacing_xxs"
+                    android:paddingBottom="@dimen/spacing_xxs"
+                    app:srcCompat="@drawable/avd_soundwave_12_soundcloudorange"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/userLiveTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/spacing_xxs"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/user_live"
+                    android:textAppearance="?attr/textAppearanceBody3"
+                    android:textColor="?attr/colorBrandColor" />
+
+            </LinearLayout>
+
+            <!--endregion live-->
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <!--endregion location live-->
+
+    <!--endregion labels-->
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/userFollowChip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_m"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="follow" />
+
+</merge>

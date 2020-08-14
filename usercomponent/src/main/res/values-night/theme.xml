@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="BaseAppTheme">
+
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="colorBackground">@color/black</item>
+        <item name="colorElevation">@color/white</item>
+        <item name="colorBrandColor">@color/orange</item>
+        <item name="colorLabel">@color/grey</item>
+        <item name="colorSecondaryElevation">@color/dark_grey</item>
+
+    </style>
+
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="user_following">Following</string>
+    <string name="user_not_following">Follow</string>
+    <string name="user_live">Live</string>
+</resources>

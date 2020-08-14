@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.Soundcloud.Chip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="android:textColor">@color/chip_text_color</item>
+        <item name="chipBackgroundColor">@color/chip_background_color</item>
+        <item name="android:textAppearance">?attr/textAppearanceBody2</item>
+        <item name="chipCornerRadius">4dp</item>
+    </style>
+</resources>
