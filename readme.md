@@ -1,3 +1,3 @@
 #### Dark mode coding challenge
 
-![https://media.giphy.com/media/51bttSFaY8OroSqbz3/giphy.gif](https://media.giphy.com/media/51bttSFaY8OroSqbz3/giphy.giff)
+![https://media.giphy.com/media/v7OUq9aIrAyxPl44qZ/giphy.gif](https://media.giphy.com/media/v7OUq9aIrAyxPl44qZ/giphy.gif)
